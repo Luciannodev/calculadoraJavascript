@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.container{
+    width: 190px;
+    padding: 5px;   
+    background-color: rgba(41, 40, 40, 0.533);
+}
+.display{
+    background-color: #15628f;
+    height: 35px;
+    width: 170px;
+    margin: 6px;
+    padding: 1px;
+    color: white;
+    font-size: 29px;
+}
+.teclas{
+    margin-left: 7px;
+    display: flex;
+    margin: 10px;
+}
+.fileira button{
+    margin:-2.5px;
+    width: 45px;
+    height: 37px;
+}
+.operadores{
+    width: 10px;
+}
