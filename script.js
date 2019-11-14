@@ -17,6 +17,13 @@ function clicar(parametro) {
             posicao = "primeiro"
             break;
         case "x":
+            if(posicao == "primeiro" && valores[0].length > 0){
+                let valor = valores[0].split('')
+                valor.pop()
+                valores[0] = valor.join("")
+                tela.innerHTML= valores[0]
+                telaCount --
+            }
             break;
         case "1":
             armazenagem(parametro)
@@ -74,6 +81,9 @@ function clicar(parametro) {
         case "+":
             parametrosOperadores(parametro)
             break;
+        case "%":
+            parametrosOperadores(parametro)
+            break;
         case "=":
             igual()
             break;
@@ -93,6 +103,7 @@ function printOnDisplay(valor) {
     }
     else {
         tela.innerHTML += valor
+        telaCount++
     }
 }
 function printOnDisplaySinal(valor) {
@@ -120,6 +131,11 @@ function igual() {
             break;
         case "+":
             valores[0] = Number(valores[0]) + Number(valores[1])
+            valores[1] = ''
+            tela.innerHTML = valores[0]
+            break;
+        case "%":
+            valores[0] = (valores[0]/100)*[valores[1]]
             valores[1] = ''
             tela.innerHTML = valores[0]
             break;
